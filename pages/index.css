@@ -14,6 +14,7 @@
 }
 
 @media(min-width: 320px) {
+    /* HEADER :  */
     .header {
         padding: 0 33px;
         margin: 0;
@@ -143,6 +144,76 @@
     }
     .header__left {
         display: none;
+    }
+    /* CONTENT :  */
+    .content {
+        margin: 0 33px;
+    }
+    /* ABOUT :  */
+    .about__title {
+        margin: 80px 0 60px;
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 65px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .about__sec-title {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .about__description {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 45px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+    }
+    .about__containers {
+        display: flex;
+    }
+    .about__container:nth-child(1) {
+        margin-left: 80px;
+    }
+    .about__container:nth-child(2) {
+        margin-left: 60px;
+    }
+    .about__text {
+        margin: 0;
+        padding: 0;
+        margin-top: 15px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+    }
+    .about__image {
+        display: none;
+    }
+    /*PRODUCTIONS:    */
+    .productions__title {
+        margin: 0;
+        padding: 0;
+        margin-top: 80px;
+        text-align: center;
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 65px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
     }
 }
 
