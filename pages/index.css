@@ -5,13 +5,35 @@
 }
 
 .page {
-    /* max-width: 1920px; */
     background: #333333;
     font-family: 'Open Sans Condensed', sans-serif;
     color: #FFFFFF;
     margin: auto;
     padding: 0;
+    overflow: hidden;
 }
+
+
+/* .owl-item {
+    width: 422px !important;
+    margin-right: 0 !important;
+} */
+
+
+/* .owl-item.active {
+    width: 442px !important;
+    margin-right: 0 !important;
+}
+
+.owl-item.cloned {
+    width: 442px !important;
+    margin-right: 0 !important;
+} */
+
+
+/* .owl-stage {
+    display: flex;;
+} */
 
 @media(min-width: 320px) {
     /* HEADER :  */
@@ -152,7 +174,7 @@
     .first-word {
         color: #D1A954;
     }
-    /* ABOUT :  */
+    /* ABOUT :   */
     .about__title {
         margin: 80px 0 60px;
         font-weight: 300;
@@ -203,7 +225,13 @@
     .about__image {
         display: none;
     }
-    /*PRODUCTIONS:    */
+    /*PRODUCTIONS :   */
+    .productions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
     .productions__title {
         margin: 0;
         padding: 0;
@@ -216,10 +244,87 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
     }
+    .productions__containers {
+        display: inline-flex;
+        scrollbar-width: none;
+        margin: 60px auto 80px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        transform: translateX(0);
+        will-change: transform;
+        transition: transform 0.5s ease-out;
+        cursor: grab;
+    }
+    .productions_container {
+        width: 442px;
+        height: 550px;
+        position: relative;
+    }
+    .grabbing {
+        cursor: grabbing;
+    }
+    .productions__image {
+        object-fit: cover;
+        opacity: 0.65;
+        transition: 0.3s ease;
+    }
+    .productions__name {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 40px;
+        left: 40px;
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: 0.3s ease;
+    }
+    .productions__date {
+        transform: rotate(-90deg);
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 78px;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: 0.3s ease;
+    }
+    .productions__open {
+        opacity: 0;
+        width: 100px;
+        height: 100px;
+        background: #D1A954;
+        border-radius: 100%;
+        position: absolute;
+        top: 225px;
+        left: 171px;
+        transition: 0.3s ease;
+    }
+    .productions__search {
+        position: absolute;
+        top: 35px;
+        left: 35px;
+    }
+    .productions_container:hover .productions__image {
+        opacity: 1;
+    }
+    .productions_container:hover .productions__name {
+        opacity: 0;
+    }
+    .productions_container:hover .productions__date {
+        opacity: 0;
+    }
+    .productions_container:hover .productions__open {
+        opacity: 1;
+    }
 }
 
 @media(min-width: 576px) {
-    /* HEADER:   */
+    /* HEADER :  */
     .header__content {
         padding-top: 169px;
         padding-bottom: 245px;
@@ -257,7 +362,7 @@
         margin-left: 0;
         margin-top: 25px;
     }
-    /* PRODUCTIONS:    */
+    /* PRODUCTIONS :    */
     .productions__title {
         margin-top: 90px;
         font-size: 48px;
@@ -265,7 +370,7 @@
 }
 
 @media(min-width: 768px) {
-    /* HEADER:    */
+    /* HEADER :    */
     .header {
         padding-left: 190px;
         padding-right: 110px;
@@ -352,9 +457,12 @@
     .about__best {
         width: 445px;
     }
-    /* PRODUCTIONS:    */
+    /* PRODUCTIONS :    */
     .productions__title {
         margin-top: 150px;
+    }
+    .productions__containers {
+        margin: 100px auto 150px;
     }
 }
 
@@ -519,6 +627,7 @@
 }
 
 @media(min-width: 1640px) {
+    /* HEADER :  */
     .header {
         padding-left: 405px;
         padding-right: 405px;
@@ -529,6 +638,7 @@
 }
 
 @media(min-width: 1710px) {
+    /* HEADER :  */
     .header__menu_item {
         margin-right: 63px;
     }
