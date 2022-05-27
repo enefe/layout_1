@@ -39,11 +39,35 @@ function touchStart() {
     }
 }
 
+/* let limits = {
+    top: big.offsetTop,
+    right: big.offsetWidth + big.offsetLeft - slider.offsetWidth,
+    bottom: big.offsetHeight + big.offsetTop - slider.offsetHeight,
+    left: big.offsetLeft
+}; */
+
 function touchMove(event) {
     if (isDragging) {
         const currentPosition = getPositionX(event)
-        console.log(currentPosition);
-        currentTranslate = prevTranslate + currentPosition - startPos
+            /* console.log(currentPosition); */
+        currentTranslate = prevTranslate + currentPosition - startPos;
+        if (currentTranslate > 0) {
+            currentTranslate = 0;
+        }
+        /* let newLocation = {
+            x: limits.left,
+            y: limits.top
+        };
+        if (event.pageX > limits.right) {
+            newLocation.x = limits.right;
+        } else if (event.pageX > limits.left) {
+            newLocation.x = event.pageX;
+        }
+        if (event.pageY > limits.bottom) {
+            newLocation.y = limits.bottom;
+        } else if (event.pageY > limits.top) {
+            newLocation.y = event.pageY;
+        } */
     }
 }
 
