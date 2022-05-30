@@ -403,6 +403,9 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
     }
+    .maecenas__content {
+        margin-bottom: 35px;
+    }
     .maecenas__form {
         width: 100%;
         display: flex;
@@ -479,6 +482,12 @@
         text-transform: uppercase;
         color: #FFFFFF;
         margin: 40px 0 30px;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+    .maecenas__button:hover {
+        transform: scale(1.02);
+        opacity: 0.8;
     }
     .maecenas__capcha {
         padding: 0;
@@ -508,12 +517,33 @@
     }
     .contacts__item {
         text-decoration: none;
-        font-size: 16px;
+        font-size: 10px;
         line-height: 22px;
         text-align: right;
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: #FFFFFF;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .contacts__item:hover {
+        opacity: 0.75;
+    }
+    /* FOOTER : */
+    .footer__container {
+        padding-top: 30px;
+        margin: 0 33px 30px;
+        border-top: 1px solid #565656;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer__text {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        line-height: 150%;
+        color: #989898;
     }
 }
 
@@ -560,6 +590,10 @@
     }
     .maecenas__message {
         min-width: 509px;
+    }
+    /* CONTACTS :   */
+    .contacts__item {
+        font-size: 16px;
     }
 }
 
@@ -795,8 +829,16 @@
         margin-top: 70px;
         margin-bottom: 100px;
     }
+    .maecenas__content {
+        margin-bottom: 55px;
+    }
     .maecenas__send {
         margin-bottom: 80px;
+    }
+    /* FOOTER :   */
+    .footer__container {
+        margin-left: 190px;
+        margin-right: 120px;
     }
 }
 
@@ -835,6 +877,11 @@
     .header__left_soc-link:hover {
         transform: scale(1.06);
         opacity: 0.8;
+    }
+    /* FOOTER :   */
+    .footer__container {
+        margin-left: 150px;
+        margin-right: 150px;
     }
 }
 
@@ -893,6 +940,7 @@
         margin-bottom: 0;
     }
     .maecenas__content {
+        margin-bottom: 80px;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -1016,9 +1064,15 @@
 }
 
 @media(min-width: 1340px) {
+    /* PARTNERS :   */
     .partners__containers {
         align-self: center;
         margin-left: 66px;
+    }
+    /* FOOTER :   */
+    .footer__container {
+        width: 1034px;
+        margin: 0 auto 30px;
     }
 }
 
