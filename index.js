@@ -10,6 +10,14 @@ function closeClick() {
 }
 
 const slider = document.querySelector('.productions__containers');
+const sliders = document.querySelectorAll('.productions_container');
+
+sliders.forEach((item) => {
+    const imageSlider = item.querySelector('.productions__image');
+    imageSlider.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+    })
+})
 
 let isDragging = false,
     startPos = 0,
@@ -49,9 +57,9 @@ function touchMove(event) {
         if (currentTranslate > 0) {
             currentTranslate = 0;
         }
-        if (window.innerWidth - slider.offsetWidth > currentTranslate + 300) {
+        /* if (window.innerWidth - slider.offsetWidth > currentTranslate + 300) {
             currentTranslate = window.innerWidth - slider.offsetWidth;
-        }
+        } */
     }
 }
 

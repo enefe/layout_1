@@ -170,6 +170,7 @@
     /* CONTENT :  */
     .content {
         margin: 0 33px;
+        position: relative;
     }
     .first-word {
         color: #D1A954;
@@ -321,6 +322,101 @@
     .productions_container:hover .productions__open {
         opacity: 1;
     }
+    /*RATING :   */
+    .rating {
+        background-image: url(../images/rating.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: calc(100% + 66px);
+        height: 320px;
+        position: absolute;
+        left: -33px;
+        display: flex;
+    }
+    .rating__left-container {
+        margin: 66px 10px 0 33px;
+    }
+    .rating__year {
+        font-size: 48px;
+        line-height: 68px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #D1A954;
+        margin: 0;
+        padding: 0;
+    }
+    .rating__right-container {
+        margin-top: 106px;
+    }
+    .rating__title {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        line-height: 150%;
+        color: #FFFFFF;
+    }
+    /* PARTNERS :  */
+    .partners {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+    .partners__title {
+        font-size: 48px;
+        line-height: 65px;
+        align-self: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin: 400px 0 60px 0;
+    }
+    .partners__containers {
+        /* display: inline-flex; */
+        /* margin-left: 66px; */
+        /*  overflow: hidden; */
+    }
+    .partners__container-top {
+        display: flex;
+    }
+    .partners__container-bottom {
+        display: flex;
+    }
+    .partners__item {
+        width: 200px;
+        margin-right: 78px;
+        margin-bottom: 80px;
+    }
+}
+
+@media(min-width: 460px) {
+    /*RATING :   */
+    .rating {
+        height: 550px;
+    }
+    .rating__left-container {
+        margin: 126px 24px 0 33px;
+    }
+    .rating__year {
+        font-size: 72px;
+        line-height: 98px;
+    }
+    .rating__right-container {
+        margin-top: 190px;
+        margin-right: 33px;
+    }
+    .rating__star {
+        margin-right: 20px;
+    }
+    .rating__title {
+        margin-top: 25px;
+        font-size: 25px;
+    }
+    /* PARTNERS :  */
+    .partners__title {
+        margin-top: 630px;
+    }
 }
 
 @media(min-width: 576px) {
@@ -366,6 +462,34 @@
     .productions__title {
         margin-top: 90px;
         font-size: 48px;
+    }
+    /* RATING :    */
+    .rating {
+        width: calc(100% + 78px);
+        left: -39px;
+    }
+    .rating__left-container {
+        margin-left: 89px;
+    }
+    .rating__right-container {
+        margin-right: 89px;
+    }
+    /* PARTNERS :   */
+    .partners__title {
+        margin-top: 640px;
+    }
+}
+
+@media(min-width: 638px) {
+    /* RATING :    */
+    .rating__left-container {
+        margin-left: 99px;
+    }
+    .rating__right-container {
+        margin-right: 99px;
+    }
+    .rating__title {
+        font-size: 29px;
     }
 }
 
@@ -464,6 +588,37 @@
     .productions__containers {
         margin: 100px auto 150px;
     }
+    /* RATING :    */
+    .rating {
+        width: calc(100% + 320px);
+        left: -190px;
+    }
+    .rating__left-container {
+        margin-left: 140px;
+        margin-right: 58px;
+    }
+    .rating__right-container {
+        margin-right: 110px;
+        margin-top: 170px;
+    }
+    .rating__title {
+        font-size: 30px;
+    }
+    /* PARTNERS :   */
+    .partners__title {
+        margin-top: 700px;
+        margin-bottom: 100px;
+    }
+}
+
+@media(min-width: 870px) {
+    /* RATING :    */
+    .rating__left-container {
+        margin-left: 190px;
+    }
+    .rating__title {
+        font-size: 34px;
+    }
 }
 
 @media(min-width: 983px) {
@@ -527,6 +682,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    /* RATING :    */
+    .rating {
+        width: calc(100% + 300px);
+        left: -150px;
+    }
+    .rating__left-container {
+        margin-right: 103px;
+    }
+    .rating__title {
+        font-size: 36px;
     }
 }
 
@@ -611,6 +777,12 @@
     .next {
         padding-right: 25px;
     }
+    /* RATING :    */
+    .rating {
+        width: 1100px;
+        left: 50%;
+        margin-left: -550px;
+    }
 }
 
 @media(min-width: 1230px) {
@@ -623,6 +795,13 @@
         width: 350px;
         height: 292px;
         object-fit: cover;
+    }
+}
+
+@media(min-width: 1340px) {
+    .partners__containers {
+        align-self: center;
+        margin-left: 66px;
     }
 }
 
