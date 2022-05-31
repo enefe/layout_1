@@ -56,8 +56,8 @@
 }
 
 .owl-carousel .owl-item img {
-    display: block;
-    width: 442px
+    /*  display: block;
+    width: 442px */
 }
 
 .no-js .owl-carousel,

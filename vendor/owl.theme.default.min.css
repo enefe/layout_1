@@ -8,7 +8,16 @@
 .owl-theme .owl-nav {
     text-align: center;
     -webkit-tap-highlight-color: transparent;
+    margin-top: 39px;
     /* width: 695px; */
+    display: flex;
+    position: relative;
+}
+
+.owl-next {
+    position: absolute;
+    left: 250px;
+    top: 5px;
 }
 
 

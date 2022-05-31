@@ -1004,6 +1004,10 @@
         height: 510px;
         position: relative;
     }
+    .header__image {
+        height: 510px !important;
+        width: 350px !important;
+    }
     .header__slider_image {
         width: 350px;
         height: 490px;
@@ -1034,6 +1038,9 @@
         align-items: center;
         transition: opacity .3s ease;
         cursor: pointer;
+    }
+    .next__nav {
+        flex-direction: row-reverse;
     }
     .header__slider_nav:nth-child(1) {
         left: 0;
