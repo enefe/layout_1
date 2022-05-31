@@ -57,9 +57,15 @@ function touchMove(event) {
         if (currentTranslate > 0) {
             currentTranslate = 0;
         }
-        /* if (window.innerWidth - slider.offsetWidth > currentTranslate + 300) {
-            currentTranslate = window.innerWidth - slider.offsetWidth;
-        } */
+        if (window.innerWidth < 768 && window.innerWidth - slider.offsetWidth > currentTranslate) {
+            currentTranslate = window.innerWidth - slider.offsetWidth - 78;
+        }
+        if (window.innerWidth >= 768 && window.innerWidth < 1002 && window.innerWidth - slider.offsetWidth > currentTranslate + 320) {
+            currentTranslate = window.innerWidth - slider.offsetWidth - 320;
+        }
+        if (window.innerWidth >= 1002 && window.innerWidth - slider.offsetWidth > currentTranslate + 300) {
+            currentTranslate = window.innerWidth - slider.offsetWidth - 300;
+        }
     }
 }
 
@@ -70,7 +76,7 @@ function touchEnd() {
     setPositionByIndex();
     slider.classList.remove('grabbing');
 
-    setPositionByIndex()
+    setPositionByIndex();
 }
 
 function animation() {
