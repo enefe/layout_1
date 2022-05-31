@@ -118,6 +118,9 @@
         width: 300px;
         height: 800px;
         background: #333333;
+        border-right: 1px solid #D1A954;
+        border-bottom: 1px solid #D1A954;
+        border-radius: 3px;
     }
     .header__button-close {
         position: absolute;
