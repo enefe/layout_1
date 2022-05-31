@@ -19,76 +19,96 @@ sliders.forEach((item) => {
     })
 })
 
-let isDragging = false,
-    startPos = 0,
-    currentTranslate = 0,
-    prevTranslate = 0,
-    animationID;
+let countSlider = slider.childElementCount;
 
-slider.addEventListener('touchstart', touchStart());
-slider.addEventListener('touchend', touchEnd);
-slider.addEventListener('touchmove', touchMove);
-slider.addEventListener('touchmove', function(event) { event.preventDefault(); }, false);
-slider.addEventListener('mousedown', touchStart());
-slider.addEventListener('mouseup', touchEnd);
-slider.addEventListener('mousemove', touchMove);
-slider.addEventListener('mouseleave', touchEnd);
-
-function getPositionX(event) {
-    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX
+if (countSlider == 2 && window.innerWidth < 2050 && window.innerWidth >= 1184) {
+    countSlider = 1;
+}
+if (countSlider == 3 && window.innerWidth < 2050 && window.innerWidth >= 1626) {
+    countSlider = 1;
 }
 
+if (window.innerWidth < 2050 && countSlider != 1) {
 
-function touchStart() {
-    return function(event) {
-        startPos = getPositionX(event);
-        isDragging = true;
-        animationID = requestAnimationFrame(animation);
-        slider.classList.add('grabbing');
+    let isDragging = false,
+        startPos = 0,
+        currentTranslate = 0,
+        prevTranslate = 0,
+        animationID;
+
+    slider.addEventListener('touchstart', touchStart());
+    slider.addEventListener('touchend', touchEnd);
+    slider.addEventListener('touchmove', touchMove);
+    slider.addEventListener('touchmove', function(event) { event.preventDefault(); }, false);
+    slider.addEventListener('mousedown', touchStart());
+    slider.addEventListener('mouseup', touchEnd);
+    slider.addEventListener('mousemove', touchMove);
+    slider.addEventListener('mouseleave', touchEnd);
+
+    function getPositionX(event) {
+        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX
     }
-}
 
-function touchMove(event) {
-    if (isDragging) {
-        const currentPosition = getPositionX(event)
-        currentTranslate = prevTranslate + currentPosition - startPos;
-        /* console.log(window.innerWidth - slider.offsetWidth)
-        console.log(currentTranslate + 300) */
-        if (currentTranslate > 0) {
-            currentTranslate = 0;
-        }
-        if (window.innerWidth < 768 && window.innerWidth - slider.offsetWidth > currentTranslate) {
-            currentTranslate = window.innerWidth - slider.offsetWidth - 78;
-        }
-        if (window.innerWidth >= 768 && window.innerWidth < 1002 && window.innerWidth - slider.offsetWidth > currentTranslate + 320) {
-            currentTranslate = window.innerWidth - slider.offsetWidth - 320;
-        }
-        if (window.innerWidth >= 1002 && window.innerWidth - slider.offsetWidth > currentTranslate + 300) {
-            currentTranslate = window.innerWidth - slider.offsetWidth - 300;
+    function touchStart() {
+        return function(event) {
+            startPos = getPositionX(event);
+            isDragging = true;
+            animationID = requestAnimationFrame(animation);
+            slider.classList.add('grabbing');
         }
     }
-}
 
-function touchEnd() {
+    function touchMove(event) {
+        if (isDragging) {
+            const currentPosition = getPositionX(event)
+            currentTranslate = prevTranslate + currentPosition - startPos;
+            /* console.log(window.innerWidth - slider.offsetWidth)
+            console.log(currentTranslate + 300) */
+            if (currentTranslate > 0) {
+                currentTranslate = 0;
+            }
+            if (window.innerWidth < 768 && window.innerWidth - slider.offsetWidth > currentTranslate) {
+                currentTranslate = window.innerWidth - slider.offsetWidth - 78;
+            }
+            if (window.innerWidth >= 768 && window.innerWidth < 1002 && window.innerWidth - slider.offsetWidth > currentTranslate + 320) {
+                currentTranslate = window.innerWidth - slider.offsetWidth - 320;
+            }
+            if (countSlider > 4 && window.innerWidth >= 1002 && window.innerWidth - slider.offsetWidth > currentTranslate + 300) {
+                currentTranslate = window.innerWidth - slider.offsetWidth - 300;
+            }
+            if (countSlider == 4 && window.innerWidth >= 1002 && window.innerWidth < 2050 && window.innerWidth - slider.offsetWidth > currentTranslate + 282) {
+                currentTranslate = window.innerWidth - slider.offsetWidth - 282;
+            }
+            if (countSlider == 3 && window.innerWidth >= 1002 && window.innerWidth < 2050 && window.innerWidth - slider.offsetWidth > currentTranslate + 282) {
+                currentTranslate = window.innerWidth - slider.offsetWidth - 282;
+            }
+            if (countSlider == 2 && window.innerWidth >= 1002 && window.innerWidth < 1184 && window.innerWidth - slider.offsetWidth > currentTranslate + 282) {
+                currentTranslate = window.innerWidth - slider.offsetWidth - 282;
+            }
+        }
+    }
 
-    cancelAnimationFrame(animationID);
-    isDragging = false;
-    setPositionByIndex();
-    slider.classList.remove('grabbing');
+    function touchEnd() {
 
-    setPositionByIndex();
-}
+        cancelAnimationFrame(animationID);
+        isDragging = false;
+        setPositionByIndex();
+        slider.classList.remove('grabbing');
 
-function animation() {
-    setSliderPosition();
-    if (isDragging) requestAnimationFrame(animation);
-}
+        setPositionByIndex();
+    }
 
-function setPositionByIndex() {
-    prevTranslate = currentTranslate;
-    setSliderPosition();
-}
+    function animation() {
+        setSliderPosition();
+        if (isDragging) requestAnimationFrame(animation);
+    }
 
-function setSliderPosition() {
-    slider.style.transform = `translateX(${currentTranslate}px)`
+    function setPositionByIndex() {
+        prevTranslate = currentTranslate;
+        setSliderPosition();
+    }
+
+    function setSliderPosition() {
+        slider.style.transform = `translateX(${currentTranslate}px)`
+    }
 }
