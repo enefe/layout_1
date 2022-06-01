@@ -71,9 +71,6 @@ if (countSlider != 1) {
             if (window.innerWidth >= 768 && window.innerWidth < 1002 && window.innerWidth - slider.offsetWidth > currentTranslate + 320) {
                 currentTranslate = window.innerWidth - slider.offsetWidth - 320;
             }
-            /* if (countSlider > 4 && window.innerWidth >= 2050 && window.innerWidth - slider.offsetWidth > currentTranslate + 282) {
-                currentTranslate = window.innerWidth - slider.offsetWidth - 282;
-            } */
             if (countSlider > 4 && window.innerWidth >= 1002 && window.innerWidth - slider.offsetWidth > currentTranslate + 300) {
                 currentTranslate = window.innerWidth - slider.offsetWidth - 300;
             }
@@ -86,12 +83,10 @@ if (countSlider != 1) {
             if (countSlider == 2 && window.innerWidth >= 1002 && window.innerWidth < 1184 && window.innerWidth - slider.offsetWidth > currentTranslate + 282) {
                 currentTranslate = window.innerWidth - slider.offsetWidth - 282;
             }
-
         }
     }
 
     function touchEnd() {
-
         cancelAnimationFrame(animationID);
         isDragging = false;
         setPositionByIndex();
