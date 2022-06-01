@@ -15,7 +15,7 @@
 @media(min-width: 320px) {
     /* HEADER :  */
     .header {
-        padding: 0 33px;
+        padding: 0 20px;
         margin: 0;
         background: url(../images/background-header-mobile.png);
         background-size: cover;
@@ -61,10 +61,10 @@
         border-bottom: 2px solid #D1A954;
     }
     .header__content {
-        padding: 114px 0 107px;
+        padding: 65px 0 50px;
     }
     .header__title {
-        font-size: 63px;
+        font-size: 31px;
         line-height: 87px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -75,7 +75,7 @@
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
         line-height: 150%;
-        margin: 50px 0;
+        margin: 30px 0;
     }
     .header__button {
         background: #D1A954;
@@ -370,9 +370,9 @@
         display: flex;
     }
     .partners__item {
-        width: 200px;
-        margin-right: 78px;
-        margin-bottom: 80px;
+        width: 150px;
+        margin-right: 44px;
+        margin-bottom: 40px;
     }
     /* MAECENAS :   */
     .maecenas {
@@ -528,7 +528,7 @@
         margin: 0;
         padding: 0;
         font-family: 'Open Sans', sans-serif;
-        font-size: 12px;
+        font-size: 9px;
         line-height: 150%;
         color: #989898;
     }
@@ -542,6 +542,10 @@
 }
 
 @media(min-width: 460px) {
+    /* HEADER :   */
+    .header__content {
+        padding: 114px 0 107px;
+    }
     /*RATING :   */
     .rating {
         height: 550px;
@@ -571,6 +575,10 @@
 }
 
 @media(min-width: 508px) {
+    /* HEADER :   */
+    .header {
+        padding: 0 33px;
+    }
     /* PRODUCTIONS :  */
     .productions_container {
         width: 442px;
@@ -606,8 +614,13 @@
         padding-top: 169px;
         padding-bottom: 245px;
     }
+    .header__title {
+        font-size: 64px;
+    }
     .header__description {
         max-width: 540px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     /* CONTENT :  */
     .content {
@@ -695,6 +708,10 @@
     }
     .maecenas__button {
         margin: 0;
+    }
+    /* FOOTER : */
+    .footer__text {
+        font-size: 12px;
     }
 }
 
