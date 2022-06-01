@@ -64,7 +64,7 @@
         padding: 114px 0 107px;
     }
     .header__title {
-        font-size: 54px;
+        font-size: 63px;
         line-height: 87px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -908,15 +908,14 @@
         transition: .3s ease;
     }
     .header__button:hover {
-        /* transform: scale(1.05); */
         opacity: 0.8;
     }
-    /* CONTENT :  */
+    /* CONTENT :   */
     .content {
         margin-left: 150px;
         margin-right: 150px;
     }
-    /* ABOUT :  */
+    /* ABOUT :   */
     .about {
         display: flex;
         flex-direction: column;
