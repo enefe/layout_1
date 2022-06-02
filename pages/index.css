@@ -1124,15 +1124,22 @@
     .contacts {
         margin-right: 125px;
     }
+    /* PRODUCTIONS 1230px:    */
+    .productions {
+        margin-right: -150px;
+    }
+    .productions__title {
+        margin-right: 150px;
+    }
 }
 
 @media(min-width: 1340px) {
-    /* PARTNERS :   */
+    /* PARTNERS 1340px:   */
     .partners__containers {
         align-self: center;
         margin-left: 66px;
     }
-    /* FOOTER :   */
+    /* FOOTER 1340px:   */
     .footer__container {
         width: 1034px;
         margin: 0 auto 30px;

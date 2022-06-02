@@ -71,6 +71,9 @@ if (countSlider != 1) {
             if (window.innerWidth >= 768 && window.innerWidth < 1002 && window.innerWidth - slider.offsetWidth > currentTranslate + 320) {
                 currentTranslate = window.innerWidth - slider.offsetWidth - 320;
             }
+            if (countSlider > 4 && window.innerWidth >= 1230 && window.innerWidth - slider.offsetWidth > currentTranslate + 150) {
+                currentTranslate = window.innerWidth - slider.offsetWidth - 150;
+            }
             if (countSlider > 4 && window.innerWidth >= 1002 && window.innerWidth - slider.offsetWidth > currentTranslate + 300) {
                 currentTranslate = window.innerWidth - slider.offsetWidth - 300;
             }
